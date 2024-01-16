@@ -11,7 +11,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { registerLocaleData } from '@angular/common';
 import localPt from '@angular/common/locales/pt';
 import { MatIconModule } from '@angular/material/icon';
-import { NgChartsModule } from 'ng2-charts';
 
 registerLocaleData(localPt, 'pt-BR');
 
@@ -29,8 +28,7 @@ registerLocaleData(localPt, 'pt-BR');
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatIconModule,
-    NgChartsModule
+    MatIconModule
   ],
   providers: [
     provideClientHydration(),
