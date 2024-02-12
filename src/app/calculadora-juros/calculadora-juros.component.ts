@@ -58,9 +58,11 @@ export class CalculadoraJurosComponent {
   constructor(private formBuilder: FormBuilder,  private calculadoraJurosService: CalculadoraJurosService, private dialog: MatDialog) { }
 
   calcular() {
+    const inicial = parseFloat(this.form.get('inicial')?.value?.toString() ?? '0');
 
     const request: CalcularRequest = 
     { 
+      inicial: inicial,
       aportes: this.aportes,
       periodo: this.form.get('periodo')?.value,
       juros: this.form.get('juros')?.value
